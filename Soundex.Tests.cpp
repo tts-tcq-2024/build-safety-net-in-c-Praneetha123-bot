@@ -11,5 +11,5 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_Negative) {
 //AAA
   char soundex[5];
   generateSoundex("A1CDFe", soundex);
-  ASSERT_STREQ(soundex,"A200");
+  ASSERT_STREQ(soundex,"A231");
 }
