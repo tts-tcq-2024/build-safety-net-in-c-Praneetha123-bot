@@ -20,3 +20,11 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_Neg) {
   generateSoundex("A[", soundex);
 
 }
+
+TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_Neg) {
+//AAA
+  char soundex[5];
+   int sIndex = 5;
+  generateSoundex("Abcd", soundex);
+
+}
