@@ -26,6 +26,11 @@ void initializeSoundex(char *soundex, char firstChar) {
     soundex[4] = '\0';
 }
 
+// Function to check if a character should be added to soundex
+int shouldAddToSoundex(char code, char *soundex, int sIndex) {
+    return sIndex < 4 && code != '0' && code != soundex[sIndex - 1];
+}
+
 void processCharacter(const char *name, char *soundex, int *sIndex, int i) {
     char code = getSoundexCode(name[i]);
 
@@ -34,11 +39,6 @@ void processCharacter(const char *name, char *soundex, int *sIndex, int i) {
         soundex[*sIndex] = code;
         (*sIndex)++;
     }
-}
-
-// Function to check if a character should be added to soundex
-int shouldAddToSoundex(char code, char *soundex, int sIndex) {
-    return sIndex < 4 && code != '0' && code != soundex[sIndex - 1];
 }
 
 
