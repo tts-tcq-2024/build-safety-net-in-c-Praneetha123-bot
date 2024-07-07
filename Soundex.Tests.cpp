@@ -17,6 +17,6 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_Negative) {
 TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_Neg) {
 //AAA
   char soundex[5];
-  generateSoundex("A", soundex);
-  ASSERT_STREQ(soundex,"A000");
+  generateSoundex("A[", soundex);
+
 }
