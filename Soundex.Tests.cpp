@@ -21,7 +21,7 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_Neg) {
 
 }
 
-TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_Neg) {
+TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_Neg1) {
 //AAA
   char soundex[5];
    int sIndex = 5;
