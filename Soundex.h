@@ -28,11 +28,19 @@ void initializeSoundex(char *soundex, char firstChar) {
 
 void processCharacter(const char *name, char *soundex, int *sIndex, int i) {
     char code = getSoundexCode(name[i]);
-    if (*sIndex < 4 && code != '0' && code != soundex[*sIndex - 1]) {
+
+    // Check if the character should be added to soundex
+    if (shouldAddToSoundex(code, soundex, *sIndex)) {
         soundex[*sIndex] = code;
         (*sIndex)++;
     }
 }
+
+// Function to check if a character should be added to soundex
+int shouldAddToSoundex(char code, char *soundex, int sIndex) {
+    return sIndex < 4 && code != '0' && code != soundex[sIndex - 1];
+}
+
 
 void generateSoundex(const char *name, char *soundex) {
     initializeSoundex(soundex, name[0]);
