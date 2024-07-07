@@ -13,3 +13,10 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_Negative) {
   generateSoundex("A1CDFe", soundex);
   ASSERT_STREQ(soundex,"A231");
 }
+
+TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_Neg) {
+//AAA
+  char soundex[5];
+  generateSoundex("A", soundex);
+  ASSERT_STREQ(soundex,"A000");
+}
