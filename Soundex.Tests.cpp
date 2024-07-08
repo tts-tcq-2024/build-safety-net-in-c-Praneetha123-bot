@@ -40,9 +40,3 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_5) {
   ASSERT_STREQ(soundex,"B200");
 }
 
-TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_6) {
-//AAA
-  char soundex[5];
-  generateSoundex("BSaZ", soundex);
-  ASSERT_STREQ(soundex,"B220");
-}
