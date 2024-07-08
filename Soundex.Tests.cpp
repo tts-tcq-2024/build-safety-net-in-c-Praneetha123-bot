@@ -32,7 +32,7 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_4) {
   ASSERT_STREQ(soundex,"A100");
 }
 
-
+//two letters with the same number separated by 'h', 'w' or 'y' are coded as a single number
 TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_5) {
 //AAA
   char soundex[5];
@@ -40,3 +40,9 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_5) {
   ASSERT_STREQ(soundex,"B200");
 }
 
+TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_6) {
+//AAA
+  char soundex[5];
+  generateSoundex("BSaZ", soundex);
+  ASSERT_STREQ(soundex,"B220");
+}
