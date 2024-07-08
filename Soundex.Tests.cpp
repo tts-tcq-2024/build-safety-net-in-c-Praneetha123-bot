@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
 #include "Soundex.h"
+
+//Append 3 zeros if result contains less than 3 digits
 TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_1) {
 //AAA
   char soundex[5];
@@ -28,5 +30,13 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_4) {
   char soundex[5];
   generateSoundex("Abfp", soundex);
   ASSERT_STREQ(soundex,"A100");
+}
+
+
+TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_5) {
+//AAA
+  char soundex[5];
+  generateSoundex("BShZ", soundex);
+  ASSERT_STREQ(soundex,"B200");
 }
 
