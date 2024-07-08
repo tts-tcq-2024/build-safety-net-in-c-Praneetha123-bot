@@ -14,14 +14,15 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_2) {
   ASSERT_STREQ(soundex,"A231");
 }
 
+//Test case to ckeck special character
 TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_3) {
 //AAA
   char soundex[5];
   generateSoundex("A[", soundex);
-
+  ASSERT_STREQ(soundex,"A000");
 }
 
-
+//Replace all adjacent same digits with one digit
 TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits_4) {
 //AAA
   char soundex[5];
